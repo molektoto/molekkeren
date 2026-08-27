@@ -733,4 +733,78 @@ footer {
         animation: none !important;
         transition: none !important;
     }
+}/* =====================================================
+   RUNNING TEXT PREMIUM
+===================================================== */
+
+.running-text {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 34px;
+
+    margin-top: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(55, 160, 255, .25);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 35, 60, .8),
+            rgba(5, 18, 32, .95),
+            rgba(10, 35, 60, .8)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.running-track {
+    display: flex;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    animation:
+        runningText 22s linear infinite;
+}
+
+.running-track span {
+    display: inline-block;
+
+    margin-right: 55px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #82cfff;
+}
+
+.running-track span::first-letter {
+    color: #2baaff;
+}
+
+@keyframes runningText {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
