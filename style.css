@@ -1,5 +1,5 @@
 /* =====================================================
-   MOLEKTOTO — PREMIUM NEON UI
+   MOLEKTOTO — DARK PREMIUM PROFESSIONAL
 ===================================================== */
 
 * {
@@ -15,43 +15,47 @@ html {
 body {
     min-height: 100vh;
     font-family: Georgia, "Times New Roman", serif;
-    color: #fff;
+    color: #f5f7fa;
+
     background:
-        radial-gradient(circle at 50% -10%, rgba(0, 190, 255, .22), transparent 38%),
-        radial-gradient(circle at 0% 70%, rgba(0, 80, 255, .14), transparent 32%),
-        radial-gradient(circle at 100% 50%, rgba(0, 210, 255, .08), transparent 28%),
-        #01050d;
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(30, 80, 130, 0.18),
+            transparent 38%
+        ),
+        #070a0f;
+
     overflow-x: hidden;
 }
 
+
 /* =====================================================
-   BACKGROUND GRID
+   BACKGROUND
 ===================================================== */
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -2;
+
     pointer-events: none;
 
     background-image:
-        linear-gradient(rgba(0, 150, 255, .035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 150, 255, .035) 1px, transparent 1px);
+        linear-gradient(
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        );
 
-    background-size: 35px 35px;
+    background-size: 45px 45px;
+
+    opacity: .35;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background:
-        radial-gradient(circle at center, transparent 40%, rgba(0,0,0,.55));
-}
 
 /* =====================================================
    PAGE
@@ -65,8 +69,9 @@ body::after {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 24px 10px 105px;
+    padding: 25px 10px 105px;
 }
+
 
 /* =====================================================
    MAIN CARD
@@ -78,46 +83,30 @@ body::after {
     width: 350px;
     min-height: 650px;
 
-    padding: 20px 15px 25px;
+    padding: 22px 15px 28px;
 
-    border: 1px solid rgba(0, 210, 255, .75);
-    border-radius: 25px;
+    border-radius: 22px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(3, 12, 25, .98),
-            rgba(4, 28, 55, .96),
-            rgba(1, 7, 15, .99)
+            #10151c,
+            #0b1017 55%,
+            #080c12
         );
 
+    border: 1px solid rgba(255,255,255,.09);
+
     box-shadow:
-        0 0 12px rgba(0, 180, 255, .45),
-        0 0 35px rgba(0, 90, 255, .22),
-        inset 0 0 35px rgba(0, 150, 255, .04);
+        0 20px 50px rgba(0,0,0,.55),
+        0 5px 20px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
 
     overflow: hidden;
-
-    animation: cardPulse 4s ease-in-out infinite alternate;
 }
 
-@keyframes cardPulse {
-    from {
-        box-shadow:
-            0 0 12px rgba(0, 180, 255, .4),
-            0 0 30px rgba(0, 90, 255, .18);
-    }
 
-    to {
-        box-shadow:
-            0 0 22px rgba(0, 220, 255, .65),
-            0 0 55px rgba(0, 100, 255, .3);
-    }
-}
-
-/* =====================================================
-   NEON TOP LINE
-===================================================== */
+/* garis atas elegan */
 
 .container::before {
     content: "";
@@ -125,30 +114,22 @@ body::after {
     position: absolute;
 
     top: 0;
-    left: 35px;
-    right: 35px;
+    left: 55px;
+    right: 55px;
 
-    height: 2px;
+    height: 1px;
 
-    background: #00eaff;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4ba3d7,
+            transparent
+        );
 
-    box-shadow:
-        0 0 8px #00eaff,
-        0 0 18px #008cff,
-        0 0 35px #0066ff;
-
-    animation: topLine 2s ease-in-out infinite alternate;
+    opacity: .8;
 }
 
-@keyframes topLine {
-    from {
-        opacity: .5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /* =====================================================
    LOGO
@@ -163,8 +144,6 @@ body::after {
     justify-content: center;
 
     margin: 0 auto;
-
-    overflow: hidden;
 }
 
 .logo img {
@@ -174,15 +153,15 @@ body::after {
     object-fit: contain;
 
     filter:
-        drop-shadow(0 0 5px rgba(0, 220, 255, .7))
-        drop-shadow(0 0 14px rgba(0, 100, 255, .35));
+        drop-shadow(0 2px 8px rgba(0,0,0,.7));
 
-    transition: transform .3s ease;
+    transition: .3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
+
 
 /* =====================================================
    SUBTITLE
@@ -193,21 +172,20 @@ body::after {
 
     margin-bottom: 18px;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
 
     letter-spacing: 3px;
 
-    color: #62eaff;
+    color: #9ba8b5;
 
-    text-shadow:
-        0 0 6px rgba(0, 210, 255, .85),
-        0 0 15px rgba(0, 130, 255, .35);
+    text-transform: uppercase;
 }
 
 .subtitle span {
-    color: #c4f6ff;
+    color: #d5e4ee;
 }
+
 
 /* =====================================================
    BANNER
@@ -215,35 +193,20 @@ body::after {
 
 .banner {
     position: relative;
-    isolation: isolate;
 
     width: 100%;
 
     overflow: hidden;
 
-    border-radius: 18px;
+    border-radius: 15px;
 
-    border: 2px solid #00d9ff;
+    border: 1px solid rgba(255,255,255,.12);
+
+    background: #05070a;
 
     box-shadow:
-        0 0 10px rgba(0, 210, 255, .7),
-        0 0 28px rgba(0, 120, 255, .4);
-
-    animation: bannerPulse 2.8s ease-in-out infinite alternate;
-}
-
-@keyframes bannerPulse {
-    from {
-        box-shadow:
-            0 0 8px rgba(0, 210, 255, .55),
-            0 0 20px rgba(0, 120, 255, .25);
-    }
-
-    to {
-        box-shadow:
-            0 0 18px rgba(0, 230, 255, .95),
-            0 0 40px rgba(0, 120, 255, .55);
-    }
+        0 10px 25px rgba(0,0,0,.45),
+        0 2px 8px rgba(0,0,0,.4);
 }
 
 .banner img {
@@ -252,51 +215,39 @@ body::after {
     width: 100%;
     height: auto;
 
-    transition: transform .6s ease;
+    transition:
+        transform .5s ease,
+        filter .5s ease;
 }
 
 .banner:hover img {
-    transform: scale(1.035);
+    transform: scale(1.025);
+
+    filter: brightness(1.05);
 }
 
+
 /* =====================================================
-   BANNER LIGHT SWEEP
+   BANNER OVERLAY
 ===================================================== */
 
-.banner-shine {
+.banner::after {
+    content: "";
+
     position: absolute;
-
-    top: 0;
-    left: -100%;
-
-    width: 45%;
-    height: 100%;
+    inset: 0;
 
     pointer-events: none;
 
     background:
         linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.4),
-            transparent
+            180deg,
+            rgba(255,255,255,.03),
+            transparent 35%,
+            rgba(0,0,0,.12)
         );
-
-    transform: skewX(-22deg);
-
-    animation: shineMove 3.8s linear infinite;
 }
 
-@keyframes shineMove {
-    0% {
-        left: -100%;
-    }
-
-    45%,
-    100% {
-        left: 150%;
-    }
-}
 
 /* =====================================================
    BUTTON AREA
@@ -305,6 +256,7 @@ body::after {
 .buttons {
     margin-top: 20px;
 }
+
 
 /* =====================================================
    PREMIUM BUTTON
@@ -316,186 +268,146 @@ body::after {
     display: flex;
 
     width: 100%;
-    height: 50px;
+    height: 48px;
 
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
-    overflow: hidden;
-
-    border-radius: 30px;
+    border-radius: 12px;
 
     text-decoration: none;
 
-    color: #fff;
+    color: #f5f8fa;
 
-    font-size: 13px;
-    font-weight: 900;
+    font-size: 12px;
+    font-weight: bold;
 
-    letter-spacing: 2px;
-
-    border: 1px solid #00eaff;
+    letter-spacing: 1.5px;
 
     background:
         linear-gradient(
             135deg,
-            #4ae8f4 0%,
-            #0796ed 50%,
-            #064fb0 100%
+            #1d2732,
+            #121a23
         );
 
+    border: 1px solid rgba(255,255,255,.11);
+
     box-shadow:
-        0 0 10px rgba(0, 210, 255, .65),
-        0 0 25px rgba(0, 110, 255, .3),
-        inset 0 1px 0 rgba(255,255,255,.3);
+        0 6px 16px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
 
     transition:
-        transform .25s ease,
-        filter .25s ease,
-        box-shadow .25s ease;
-
-    animation: buttonPulse 2.4s ease-in-out infinite alternate;
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
-@keyframes buttonPulse {
-    from {
-        box-shadow:
-            0 0 8px rgba(0, 210, 255, .5),
-            0 0 18px rgba(0, 100, 255, .2);
-    }
 
-    to {
-        box-shadow:
-            0 0 18px rgba(0, 230, 255, .95),
-            0 0 35px rgba(0, 110, 255, .5);
-    }
-}
+/* aksen biru tipis */
 
-.btn span {
-    position: relative;
-    z-index: 2;
-}
-
-/* =====================================================
-   BUTTON LIGHT
-===================================================== */
-
-.btn::after {
+.btn::before {
     content: "";
 
     position: absolute;
 
-    top: 0;
-    left: -100%;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
 
-    width: 55%;
-    height: 100%;
+    width: 2px;
 
-    pointer-events: none;
+    border-radius: 5px;
+
+    background: #4ca6d8;
+
+    opacity: .8;
+}
+
+
+/* hover */
+
+.btn:hover {
+    transform: translateY(-2px);
 
     background:
         linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.38),
-            transparent
+            135deg,
+            #263542,
+            #17212b
         );
 
-    transform: skewX(-25deg);
-
-    animation: buttonSweep 3s linear infinite;
-}
-
-@keyframes buttonSweep {
-    0% {
-        left: -100%;
-    }
-
-    50%,
-    100% {
-        left: 150%;
-    }
-}
-
-.btn:hover {
-    transform: translateY(-3px) scale(1.02);
-
-    filter: brightness(1.12);
+    border-color:
+        rgba(76,166,216,.4);
 
     box-shadow:
-        0 0 20px rgba(0, 230, 255, 1),
-        0 0 45px rgba(0, 120, 255, .6);
+        0 10px 22px rgba(0,0,0,.45),
+        0 0 12px rgba(50,130,180,.12);
 }
 
+
+/* klik */
+
 .btn:active {
-    transform: scale(.98);
+    transform: translateY(0);
 }
+
 
 /* =====================================================
    DESCRIPTION
 ===================================================== */
 
 .description {
-    margin-top: 8px;
+    margin-top: 9px;
 
-    padding: 16px 14px;
+    padding: 17px 15px;
 
     text-align: center;
 
     font-size: 9px;
     line-height: 18px;
 
-    color: #91e8ff;
+    color: #9daab6;
 
-    border: 1px solid rgba(0, 180, 255, .45);
+    border: 1px solid rgba(255,255,255,.07);
 
-    border-radius: 13px;
+    border-radius: 12px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(0, 110, 190, .14),
-            rgba(0, 30, 70, .25)
-        );
+        rgba(255,255,255,.025);
 
     box-shadow:
-        inset 0 0 20px rgba(0, 150, 255, .05);
+        inset 0 1px 0 rgba(255,255,255,.025);
 }
 
+
+/* judul */
+
 .description h1 {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 
     font-size: 17px;
 
     letter-spacing: 2px;
 
-    color: #00e5ff;
+    color: #e7edf2;
 
     text-shadow:
-        0 0 7px #00d9ff,
-        0 0 18px rgba(0, 140, 255, .65);
-
-    animation: titlePulse 2s ease-in-out infinite alternate;
+        0 2px 8px rgba(0,0,0,.7);
 }
 
-@keyframes titlePulse {
-    from {
-        opacity: .8;
-    }
 
-    to {
-        opacity: 1;
-    }
-}
+/* strong */
 
 .description strong {
-    color: #00d9ff;
+    color: #b9d9eb;
 
-    text-shadow:
-        0 0 7px rgba(0, 200, 255, .8);
+    font-weight: bold;
 }
+
 
 /* =====================================================
    FOOTER
@@ -506,14 +418,16 @@ footer {
 
     padding-top: 15px;
 
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
     text-align: center;
 
     font-size: 9px;
 
-    color: #5b7890;
-
-    border-top: 1px solid rgba(0, 120, 190, .35);
+    color: #65717d;
 }
+
 
 /* =====================================================
    BOTTOM NAVIGATION
@@ -531,27 +445,27 @@ footer {
 
     width: 100%;
     max-width: 900px;
-    height: 72px;
+
+    height: 70px;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
     background:
-        linear-gradient(
-            180deg,
-            rgba(3, 30, 75, .97),
-            rgba(1, 8, 25, .99)
-        );
+        rgba(10,14,20,.96);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    border-top: 1px solid rgba(0, 210, 255, .65);
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
     box-shadow:
-        0 -5px 25px rgba(0, 120, 255, .3);
+        0 -8px 25px rgba(0,0,0,.45);
 }
+
 
 /* =====================================================
    NAV ITEM
@@ -559,6 +473,15 @@ footer {
 
 .bottom-item {
     position: relative;
+
+    border: 0;
+
+    border-right:
+        1px solid rgba(255,255,255,.05);
+
+    background: transparent;
+
+    color: #89949f;
 
     display: flex;
 
@@ -569,40 +492,59 @@ footer {
 
     padding-bottom: 8px;
 
-    border: 0;
-    border-right: 1px solid rgba(0, 100, 170, .25);
-
-    background: transparent;
-
-    color: #fff;
-
     text-decoration: none;
 
+    cursor: pointer;
+
     transition:
-        background .25s ease,
-        transform .25s ease;
+        color .25s ease,
+        background .25s ease;
 }
 
 .bottom-item:last-child {
     border-right: none;
 }
 
+
+/* hover */
+
 .bottom-item:hover {
-    background: rgba(0, 150, 255, .12);
+    color: #dce7ef;
+
+    background:
+        rgba(255,255,255,.025);
 }
 
-/* =====================================================
-   ACTIVE NAV
-===================================================== */
+
+/* aktif */
 
 .bottom-item.active {
+    color: #e8f5fc;
+
     background:
-        linear-gradient(
-            180deg,
-            rgba(0, 140, 255, .2),
-            rgba(0, 60, 130, .05)
-        );
+        rgba(70,140,180,.07);
 }
+
+
+/* garis aktif */
+
+.bottom-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+
+    height: 2px;
+
+    background: #5aa8d5;
+
+    border-radius:
+        5px 5px 0 0;
+}
+
 
 /* =====================================================
    NAV ICON
@@ -611,68 +553,60 @@ footer {
 .nav-icon {
     position: absolute;
 
-    top: -23px;
+    top: -22px;
 
-    width: 44px;
-    height: 44px;
+    width: 43px;
+    height: 43px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border-radius: 12px;
-
-    border: 1px solid #00cfff;
+    border-radius: 11px;
 
     background:
         linear-gradient(
             145deg,
-            #ffffff,
-            #d7f6ff
+            #f4f6f8,
+            #cfd6dc
         );
 
-    color: #075a98;
+    color: #27333d;
 
-    font-size: 25px;
+    font-size: 24px;
+
+    border:
+        1px solid rgba(255,255,255,.5);
 
     box-shadow:
-        0 0 8px rgba(0, 200, 255, .5),
-        0 3px 8px rgba(0,0,0,.45);
-
-    animation: iconPulse 2s ease-in-out infinite alternate;
+        0 5px 12px rgba(0,0,0,.45);
 
     transition:
         transform .25s ease,
         box-shadow .25s ease;
 }
 
-@keyframes iconPulse {
-    from {
-        box-shadow:
-            0 0 5px rgba(0, 190, 255, .35);
-    }
-
-    to {
-        box-shadow:
-            0 0 15px rgba(0, 220, 255, .85);
-    }
-}
-
 .bottom-item:hover .nav-icon {
-    transform: translateY(-3px) scale(1.04);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 0 18px rgba(0, 230, 255, .9);
+        0 7px 16px rgba(0,0,0,.55);
 }
+
+
+/* =====================================================
+   NAV TEXT
+===================================================== */
 
 .bottom-item small {
     font-size: 10px;
 
-    font-weight: 900;
+    font-weight: bold;
 
-    letter-spacing: .6px;
+    letter-spacing: .5px;
 }
+
 
 /* =====================================================
    MOBILE
@@ -695,17 +629,16 @@ footer {
     }
 
     .banner {
-        border-radius: 16px;
+        border-radius: 14px;
     }
 
     .btn {
-        height: 49px;
-        font-size: 12px;
+        height: 48px;
+        font-size: 11px;
     }
 
     .description {
         font-size: 9px;
-        line-height: 17px;
     }
 
     .description h1 {
@@ -721,8 +654,9 @@ footer {
     }
 }
 
+
 /* =====================================================
-   ACCESSIBILITY
+   REDUCE MOTION
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
