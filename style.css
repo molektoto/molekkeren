@@ -687,9 +687,23 @@ footer {
         max-width: 380px;
     }
 
-    .logo img {
-        width: 170px;
-    }
+    .logo {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 170px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
 
     .banner {
         border-radius: 16px;
