@@ -1,6 +1,6 @@
-/* =========================================================
-   MOLEKTOTO — LUXURY DARK PREMIUM
-   ========================================================= */
+/* =====================================================
+   MOLEKTOTO — BLUE LUXURY PREMIUM
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -15,29 +15,35 @@ html {
 body {
     min-height: 100vh;
     font-family: Georgia, "Times New Roman", serif;
-    color: #f5f2eb;
+    color: #f4f8ff;
     background:
-        radial-gradient(circle at 50% -10%, #26313b 0%, transparent 38%),
-        linear-gradient(180deg, #080b0f 0%, #05070a 100%);
+        radial-gradient(circle at 50% 0%, #12345a 0%, transparent 38%),
+        linear-gradient(180deg, #030914 0%, #02050a 100%);
     overflow-x: hidden;
 }
 
-/* tekstur halus */
+/* background premium */
+
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    opacity: .18;
+    opacity: .3;
+
     background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-    background-size: 50px 50px;
+        radial-gradient(
+            rgba(45, 145, 255, .18) 1px,
+            transparent 1px
+        );
+
+    background-size: 34px 34px;
 }
 
-/* =========================================================
-   AREA UTAMA
-   ========================================================= */
+
+/* =====================================================
+   PAGE
+===================================================== */
 
 .page {
     width: 100%;
@@ -50,9 +56,10 @@ body::before {
     padding: 25px 10px 110px;
 }
 
-/* =========================================================
-   CARD UTAMA
-   ========================================================= */
+
+/* =====================================================
+   CONTAINER
+===================================================== */
 
 .container {
     position: relative;
@@ -67,21 +74,23 @@ body::before {
     background:
         linear-gradient(
             145deg,
-            rgba(25, 30, 35, .98),
-            rgba(10, 13, 17, .99)
+            #081523,
+            #050b14 55%,
+            #02060c
         );
 
-    border: 1px solid rgba(255,255,255,.09);
+    border: 1px solid rgba(51, 160, 255, .38);
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.65),
-        0 5px 20px rgba(0,0,0,.45),
+        0 25px 60px rgba(0,0,0,.7),
+        0 0 35px rgba(0,100,255,.12),
         inset 0 1px 0 rgba(255,255,255,.06);
 
     overflow: hidden;
 }
 
-/* garis premium bagian atas */
+
+/* garis biru premium */
 
 .container::before {
     content: "";
@@ -89,21 +98,25 @@ body::before {
     position: absolute;
 
     top: 0;
-    left: 55px;
-    right: 55px;
+    left: 45px;
+    right: 45px;
 
-    height: 1px;
+    height: 2px;
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            #c7a96b,
+            #48b9ff,
+            #087cff,
+            #48b9ff,
             transparent
         );
 
-    opacity: .8;
+    box-shadow:
+        0 0 10px rgba(40,160,255,.55);
 }
+
 
 /* cahaya lembut */
 
@@ -112,24 +125,25 @@ body::before {
 
     position: absolute;
 
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
 
-    top: -100px;
+    top: -130px;
     left: 50%;
 
     transform: translateX(-50%);
 
-    background: rgba(190,160,90,.08);
+    background: rgba(0,120,255,.12);
 
-    filter: blur(55px);
+    filter: blur(65px);
 
     pointer-events: none;
 }
 
-/* =========================================================
+
+/* =====================================================
    LOGO
-   ========================================================= */
+===================================================== */
 
 .logo {
     position: relative;
@@ -152,7 +166,7 @@ body::before {
     object-fit: contain;
 
     filter:
-        drop-shadow(0 4px 10px rgba(0,0,0,.7));
+        drop-shadow(0 4px 12px rgba(0,100,255,.25));
 
     transition: .3s ease;
 }
@@ -161,9 +175,10 @@ body::before {
     transform: scale(1.04);
 }
 
-/* =========================================================
+
+/* =====================================================
    SUBTITLE
-   ========================================================= */
+===================================================== */
 
 .subtitle {
     position: relative;
@@ -178,18 +193,19 @@ body::before {
 
     letter-spacing: 3px;
 
-    color: #aaa79f;
+    color: #8fa9c1;
 
     text-transform: uppercase;
 }
 
 .subtitle span {
-    color: #d2b875;
+    color: #49b9ff;
 }
 
-/* =========================================================
+
+/* =====================================================
    BANNER
-   ========================================================= */
+===================================================== */
 
 .banner {
     position: relative;
@@ -201,13 +217,13 @@ body::before {
 
     border-radius: 16px;
 
-    background: #030405;
+    background: #02060c;
 
-    border: 1px solid rgba(199,169,107,.35);
+    border: 1px solid rgba(30,150,255,.65);
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.6),
-        0 2px 8px rgba(0,0,0,.4);
+        0 12px 30px rgba(0,0,0,.65),
+        0 0 18px rgba(0,120,255,.15);
 }
 
 .banner img {
@@ -217,16 +233,17 @@ body::before {
     height: auto;
 
     transition:
-        transform .6s ease,
-        filter .6s ease;
+        transform .5s ease,
+        filter .5s ease;
 }
 
 .banner:hover img {
     transform: scale(1.025);
-    filter: brightness(1.06);
+    filter: brightness(1.07);
 }
 
-/* overlay foto */
+
+/* efek cahaya tipis pada banner */
 
 .banner::after {
     content: "";
@@ -241,13 +258,14 @@ body::before {
             180deg,
             rgba(255,255,255,.05),
             transparent 30%,
-            rgba(0,0,0,.18)
+            rgba(0,50,120,.12)
         );
 }
 
-/* =========================================================
-   BUTTON AREA
-   ========================================================= */
+
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .buttons {
     position: relative;
@@ -256,9 +274,8 @@ body::before {
     margin-top: 21px;
 }
 
-/* =========================================================
-   PREMIUM BUTTON
-   ========================================================= */
+
+/* tombol premium */
 
 .btn {
     position: relative;
@@ -284,29 +301,30 @@ body::before {
 
     letter-spacing: 1.5px;
 
-    color: #f7f3ea;
+    color: #f4f9ff;
 
     background:
         linear-gradient(
             135deg,
-            #20262c,
-            #11161b
+            #123456,
+            #071725
         );
 
-    border: 1px solid rgba(255,255,255,.10);
+    border: 1px solid rgba(60,170,255,.38);
 
     box-shadow:
         0 8px 20px rgba(0,0,0,.45),
-        inset 0 1px 0 rgba(255,255,255,.05);
+        inset 0 1px 0 rgba(255,255,255,.06);
 
     transition:
         transform .22s ease,
-        border-color .22s ease,
         background .22s ease,
+        border-color .22s ease,
         box-shadow .22s ease;
 }
 
-/* aksen emas kecil */
+
+/* aksen kiri */
 
 .btn::before {
     content: "";
@@ -314,41 +332,26 @@ body::before {
     position: absolute;
 
     left: 0;
-    top: 12px;
-    bottom: 12px;
+    top: 10px;
+    bottom: 10px;
 
-    width: 2px;
+    width: 3px;
 
     border-radius: 5px;
 
-    background: #c7a96b;
-}
-
-/* garis halus */
-
-.btn::after {
-    content: "";
-
-    position: absolute;
-
-    left: 15%;
-    right: 15%;
-    bottom: 0;
-
-    height: 1px;
-
     background:
         linear-gradient(
-            90deg,
-            transparent,
-            rgba(199,169,107,.35),
-            transparent
+            180deg,
+            #66d0ff,
+            #087cff
         );
 
-    opacity: 0;
-
-    transition: .25s;
+    box-shadow:
+        0 0 8px rgba(0,140,255,.5);
 }
+
+
+/* hover */
 
 .btn:hover {
     transform: translateY(-2px);
@@ -356,29 +359,26 @@ body::before {
     background:
         linear-gradient(
             135deg,
-            #293137,
-            #171d22
+            #17466f,
+            #0a1e31
         );
 
     border-color:
-        rgba(199,169,107,.38);
+        rgba(65,180,255,.75);
 
     box-shadow:
         0 12px 25px rgba(0,0,0,.55),
-        0 0 18px rgba(199,169,107,.08);
-}
-
-.btn:hover::after {
-    opacity: 1;
+        0 0 16px rgba(0,130,255,.16);
 }
 
 .btn:active {
     transform: translateY(0);
 }
 
-/* =========================================================
-   DESKRIPSI
-   ========================================================= */
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .description {
     position: relative;
@@ -396,24 +396,25 @@ body::before {
 
     line-height: 18px;
 
-    color: #9da5ab;
+    color: #91a8bc;
 
     border-radius: 14px;
 
-    border: 1px solid rgba(255,255,255,.07);
+    border: 1px solid rgba(40,140,220,.25);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,.035),
-            rgba(255,255,255,.012)
+            rgba(18,55,88,.35),
+            rgba(5,15,25,.45)
         );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.035);
+        inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-/* judul deskripsi */
+
+/* judul */
 
 .description h1 {
     margin-bottom: 8px;
@@ -424,19 +425,23 @@ body::before {
 
     letter-spacing: 2px;
 
-    color: #e8e1d4;
+    color: #dceeff;
 
     text-shadow:
-        0 3px 10px rgba(0,0,0,.7);
+        0 2px 10px rgba(0,100,255,.3);
 }
+
+
+/* strong */
 
 .description strong {
-    color: #d1b574;
+    color: #4fc2ff;
 }
 
-/* =========================================================
+
+/* =====================================================
    FOOTER
-   ========================================================= */
+===================================================== */
 
 footer {
     position: relative;
@@ -447,7 +452,7 @@ footer {
     padding-top: 15px;
 
     border-top:
-        1px solid rgba(255,255,255,.07);
+        1px solid rgba(60,150,220,.18);
 
     text-align: center;
 
@@ -455,12 +460,13 @@ footer {
 
     font-size: 9px;
 
-    color: #626b72;
+    color: #50677b;
 }
 
-/* =========================================================
-   NAVIGASI BAWAH
-   ========================================================= */
+
+/* =====================================================
+   BOTTOM NAV
+===================================================== */
 
 .bottom-nav {
     position: fixed;
@@ -483,17 +489,18 @@ footer {
         repeat(4, 1fr);
 
     background:
-        rgba(9,12,16,.96);
+        rgba(3,10,18,.96);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(40,150,255,.25);
 
     box-shadow:
-        0 -10px 30px rgba(0,0,0,.55);
+        0 -10px 30px rgba(0,0,0,.65);
 }
+
 
 /* item */
 
@@ -507,7 +514,7 @@ footer {
 
     background: transparent;
 
-    color: #777f86;
+    color: #6d8194;
 
     display: flex;
 
@@ -532,43 +539,52 @@ footer {
 }
 
 .bottom-item:hover {
-    color: #eee8dc;
+    color: #dcefff;
 
     background:
-        rgba(255,255,255,.025);
+        rgba(0,120,255,.06);
 }
 
-/* item aktif */
+
+/* aktif */
 
 .bottom-item.active {
-    color: #eee5d4;
+    color: #51c3ff;
 
     background:
-        rgba(199,169,107,.055);
+        rgba(0,110,255,.08);
 }
 
-/* garis aktif emas */
+
+/* garis aktif */
 
 .bottom-item.active::after {
     content: "";
 
     position: absolute;
 
-    left: 28%;
-    right: 28%;
+    left: 25%;
+    right: 25%;
     bottom: 0;
 
     height: 2px;
 
-    background: #c7a96b;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #29adff,
+            transparent
+        );
 
-    border-radius:
-        5px 5px 0 0;
+    box-shadow:
+        0 0 8px rgba(0,150,255,.45);
 }
 
-/* =========================================================
-   ICON NAV
-   ========================================================= */
+
+/* =====================================================
+   ICON
+===================================================== */
 
 .nav-icon {
     position: absolute;
@@ -588,19 +604,19 @@ footer {
     background:
         linear-gradient(
             145deg,
-            #f5f2eb,
-            #c9c5bd
+            #f3f8fc,
+            #b9c8d4
         );
 
-    color: #252a2e;
+    color: #152637;
 
     font-size: 23px;
 
     border:
-        1px solid rgba(255,255,255,.5);
+        1px solid rgba(120,190,230,.55);
 
     box-shadow:
-        0 6px 14px rgba(0,0,0,.5);
+        0 6px 14px rgba(0,0,0,.55);
 
     transition:
         transform .25s ease,
@@ -611,10 +627,11 @@ footer {
     transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0,0,0,.6);
+        0 8px 18px rgba(0,80,150,.4);
 }
 
-/* text nav */
+
+/* text */
 
 .bottom-item small {
     font-family: Arial, sans-serif;
@@ -626,9 +643,10 @@ footer {
     letter-spacing: .5px;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 500px) {
 
@@ -644,10 +662,6 @@ footer {
 
     .logo img {
         width: 170px;
-    }
-
-    .banner {
-        border-radius: 15px;
     }
 
     .btn {
@@ -669,19 +683,5 @@ footer {
 
     .bottom-item small {
         font-size: 9px;
-    }
-}
-
-/* =========================================================
-   AKSESIBILITAS
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
     }
 }
