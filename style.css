@@ -1,6 +1,6 @@
-/* =====================================================
-   MOLEKTOTO — DARK PREMIUM PROFESSIONAL
-===================================================== */
+/* =========================================================
+   MOLEKTOTO — LUXURY DARK PREMIUM
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -15,51 +15,29 @@ html {
 body {
     min-height: 100vh;
     font-family: Georgia, "Times New Roman", serif;
-    color: #f5f7fa;
-
+    color: #f5f2eb;
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(30, 80, 130, 0.18),
-            transparent 38%
-        ),
-        #070a0f;
-
+        radial-gradient(circle at 50% -10%, #26313b 0%, transparent 38%),
+        linear-gradient(180deg, #080b0f 0%, #05070a 100%);
     overflow-x: hidden;
 }
 
-
-/* =====================================================
-   BACKGROUND
-===================================================== */
-
+/* tekstur halus */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-
     pointer-events: none;
-
+    opacity: .18;
     background-image:
-        linear-gradient(
-            rgba(255,255,255,0.018) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.018) 1px,
-            transparent 1px
-        );
-
-    background-size: 45px 45px;
-
-    opacity: .35;
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
-
-/* =====================================================
-   PAGE
-===================================================== */
+/* =========================================================
+   AREA UTAMA
+   ========================================================= */
 
 .page {
     width: 100%;
@@ -69,13 +47,12 @@ body::before {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 25px 10px 105px;
+    padding: 25px 10px 110px;
 }
 
-
-/* =====================================================
-   MAIN CARD
-===================================================== */
+/* =========================================================
+   CARD UTAMA
+   ========================================================= */
 
 .container {
     position: relative;
@@ -83,30 +60,28 @@ body::before {
     width: 350px;
     min-height: 650px;
 
-    padding: 22px 15px 28px;
+    padding: 22px 15px 30px;
 
-    border-radius: 22px;
+    border-radius: 24px;
 
     background:
         linear-gradient(
             145deg,
-            #10151c,
-            #0b1017 55%,
-            #080c12
+            rgba(25, 30, 35, .98),
+            rgba(10, 13, 17, .99)
         );
 
     border: 1px solid rgba(255,255,255,.09);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.55),
-        0 5px 20px rgba(0,0,0,.35),
-        inset 0 1px 0 rgba(255,255,255,.05);
+        0 25px 60px rgba(0,0,0,.65),
+        0 5px 20px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.06);
 
     overflow: hidden;
 }
 
-
-/* garis atas elegan */
+/* garis premium bagian atas */
 
 .container::before {
     content: "";
@@ -123,19 +98,43 @@ body::before {
         linear-gradient(
             90deg,
             transparent,
-            #4ba3d7,
+            #c7a96b,
             transparent
         );
 
     opacity: .8;
 }
 
+/* cahaya lembut */
 
-/* =====================================================
+.container::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(190,160,90,.08);
+
+    filter: blur(55px);
+
+    pointer-events: none;
+}
+
+/* =========================================================
    LOGO
-===================================================== */
+   ========================================================= */
 
 .logo {
+    position: relative;
+    z-index: 2;
+
     width: 100%;
     height: 62px;
 
@@ -153,59 +152,61 @@ body::before {
     object-fit: contain;
 
     filter:
-        drop-shadow(0 2px 8px rgba(0,0,0,.7));
+        drop-shadow(0 4px 10px rgba(0,0,0,.7));
 
     transition: .3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
-
-/* =====================================================
+/* =========================================================
    SUBTITLE
-===================================================== */
+   ========================================================= */
 
 .subtitle {
+    position: relative;
+    z-index: 2;
+
     text-align: center;
 
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 
     font-size: 9px;
     font-weight: bold;
 
     letter-spacing: 3px;
 
-    color: #9ba8b5;
+    color: #aaa79f;
 
     text-transform: uppercase;
 }
 
 .subtitle span {
-    color: #d5e4ee;
+    color: #d2b875;
 }
 
-
-/* =====================================================
+/* =========================================================
    BANNER
-===================================================== */
+   ========================================================= */
 
 .banner {
     position: relative;
+    z-index: 2;
 
     width: 100%;
 
     overflow: hidden;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
-    border: 1px solid rgba(255,255,255,.12);
+    background: #030405;
 
-    background: #05070a;
+    border: 1px solid rgba(199,169,107,.35);
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.45),
+        0 12px 30px rgba(0,0,0,.6),
         0 2px 8px rgba(0,0,0,.4);
 }
 
@@ -216,20 +217,16 @@ body::before {
     height: auto;
 
     transition:
-        transform .5s ease,
-        filter .5s ease;
+        transform .6s ease,
+        filter .6s ease;
 }
 
 .banner:hover img {
     transform: scale(1.025);
-
-    filter: brightness(1.05);
+    filter: brightness(1.06);
 }
 
-
-/* =====================================================
-   BANNER OVERLAY
-===================================================== */
+/* overlay foto */
 
 .banner::after {
     content: "";
@@ -242,25 +239,26 @@ body::before {
     background:
         linear-gradient(
             180deg,
-            rgba(255,255,255,.03),
-            transparent 35%,
-            rgba(0,0,0,.12)
+            rgba(255,255,255,.05),
+            transparent 30%,
+            rgba(0,0,0,.18)
         );
 }
 
-
-/* =====================================================
+/* =========================================================
    BUTTON AREA
-===================================================== */
+   ========================================================= */
 
 .buttons {
-    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+
+    margin-top: 21px;
 }
 
-
-/* =====================================================
+/* =========================================================
    PREMIUM BUTTON
-===================================================== */
+   ========================================================= */
 
 .btn {
     position: relative;
@@ -268,46 +266,47 @@ body::before {
     display: flex;
 
     width: 100%;
-    height: 48px;
+    height: 50px;
 
     align-items: center;
     justify-content: center;
 
     margin-bottom: 14px;
 
-    border-radius: 12px;
+    border-radius: 13px;
 
     text-decoration: none;
 
-    color: #f5f8fa;
+    font-family: Arial, sans-serif;
 
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
 
     letter-spacing: 1.5px;
+
+    color: #f7f3ea;
 
     background:
         linear-gradient(
             135deg,
-            #1d2732,
-            #121a23
+            #20262c,
+            #11161b
         );
 
-    border: 1px solid rgba(255,255,255,.11);
+    border: 1px solid rgba(255,255,255,.10);
 
     box-shadow:
-        0 6px 16px rgba(0,0,0,.35),
+        0 8px 20px rgba(0,0,0,.45),
         inset 0 1px 0 rgba(255,255,255,.05);
 
     transition:
-        transform .2s ease,
-        background .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        box-shadow .22s ease;
 }
 
-
-/* aksen biru tipis */
+/* aksen emas kecil */
 
 .btn::before {
     content: "";
@@ -315,20 +314,41 @@ body::before {
     position: absolute;
 
     left: 0;
-    top: 10px;
-    bottom: 10px;
+    top: 12px;
+    bottom: 12px;
 
     width: 2px;
 
     border-radius: 5px;
 
-    background: #4ca6d8;
-
-    opacity: .8;
+    background: #c7a96b;
 }
 
+/* garis halus */
 
-/* hover */
+.btn::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15%;
+    right: 15%;
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(199,169,107,.35),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition: .25s;
+}
 
 .btn:hover {
     transform: translateY(-2px);
@@ -336,85 +356,93 @@ body::before {
     background:
         linear-gradient(
             135deg,
-            #263542,
-            #17212b
+            #293137,
+            #171d22
         );
 
     border-color:
-        rgba(76,166,216,.4);
+        rgba(199,169,107,.38);
 
     box-shadow:
-        0 10px 22px rgba(0,0,0,.45),
-        0 0 12px rgba(50,130,180,.12);
+        0 12px 25px rgba(0,0,0,.55),
+        0 0 18px rgba(199,169,107,.08);
 }
 
-
-/* klik */
+.btn:hover::after {
+    opacity: 1;
+}
 
 .btn:active {
     transform: translateY(0);
 }
 
-
-/* =====================================================
-   DESCRIPTION
-===================================================== */
+/* =========================================================
+   DESKRIPSI
+   ========================================================= */
 
 .description {
-    margin-top: 9px;
+    position: relative;
+    z-index: 2;
 
-    padding: 17px 15px;
+    margin-top: 10px;
+
+    padding: 18px 15px;
 
     text-align: center;
 
+    font-family: Arial, sans-serif;
+
     font-size: 9px;
+
     line-height: 18px;
 
-    color: #9daab6;
+    color: #9da5ab;
+
+    border-radius: 14px;
 
     border: 1px solid rgba(255,255,255,.07);
 
-    border-radius: 12px;
-
     background:
-        rgba(255,255,255,.025);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.012)
+        );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.025);
+        inset 0 1px 0 rgba(255,255,255,.035);
 }
 
-
-/* judul */
+/* judul deskripsi */
 
 .description h1 {
     margin-bottom: 8px;
+
+    font-family: Georgia, serif;
 
     font-size: 17px;
 
     letter-spacing: 2px;
 
-    color: #e7edf2;
+    color: #e8e1d4;
 
     text-shadow:
-        0 2px 8px rgba(0,0,0,.7);
+        0 3px 10px rgba(0,0,0,.7);
 }
-
-
-/* strong */
 
 .description strong {
-    color: #b9d9eb;
-
-    font-weight: bold;
+    color: #d1b574;
 }
 
-
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+   ========================================================= */
 
 footer {
-    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+
+    margin-top: 26px;
 
     padding-top: 15px;
 
@@ -423,15 +451,16 @@ footer {
 
     text-align: center;
 
+    font-family: Arial, sans-serif;
+
     font-size: 9px;
 
-    color: #65717d;
+    color: #626b72;
 }
 
-
-/* =====================================================
-   BOTTOM NAVIGATION
-===================================================== */
+/* =========================================================
+   NAVIGASI BAWAH
+   ========================================================= */
 
 .bottom-nav {
     position: fixed;
@@ -454,22 +483,19 @@ footer {
         repeat(4, 1fr);
 
     background:
-        rgba(10,14,20,.96);
+        rgba(9,12,16,.96);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     border-top:
         1px solid rgba(255,255,255,.08);
 
     box-shadow:
-        0 -8px 25px rgba(0,0,0,.45);
+        0 -10px 30px rgba(0,0,0,.55);
 }
 
-
-/* =====================================================
-   NAV ITEM
-===================================================== */
+/* item */
 
 .bottom-item {
     position: relative;
@@ -481,7 +507,7 @@ footer {
 
     background: transparent;
 
-    color: #89949f;
+    color: #777f86;
 
     display: flex;
 
@@ -505,55 +531,49 @@ footer {
     border-right: none;
 }
 
-
-/* hover */
-
 .bottom-item:hover {
-    color: #dce7ef;
+    color: #eee8dc;
 
     background:
         rgba(255,255,255,.025);
 }
 
-
-/* aktif */
+/* item aktif */
 
 .bottom-item.active {
-    color: #e8f5fc;
+    color: #eee5d4;
 
     background:
-        rgba(70,140,180,.07);
+        rgba(199,169,107,.055);
 }
 
-
-/* garis aktif */
+/* garis aktif emas */
 
 .bottom-item.active::after {
     content: "";
 
     position: absolute;
 
+    left: 28%;
+    right: 28%;
     bottom: 0;
-    left: 25%;
-    right: 25%;
 
     height: 2px;
 
-    background: #5aa8d5;
+    background: #c7a96b;
 
     border-radius:
         5px 5px 0 0;
 }
 
-
-/* =====================================================
-   NAV ICON
-===================================================== */
+/* =========================================================
+   ICON NAV
+   ========================================================= */
 
 .nav-icon {
     position: absolute;
 
-    top: -22px;
+    top: -21px;
 
     width: 43px;
     height: 43px;
@@ -563,24 +583,24 @@ footer {
     align-items: center;
     justify-content: center;
 
-    border-radius: 11px;
+    border-radius: 12px;
 
     background:
         linear-gradient(
             145deg,
-            #f4f6f8,
-            #cfd6dc
+            #f5f2eb,
+            #c9c5bd
         );
 
-    color: #27333d;
+    color: #252a2e;
 
-    font-size: 24px;
+    font-size: 23px;
 
     border:
         1px solid rgba(255,255,255,.5);
 
     box-shadow:
-        0 5px 12px rgba(0,0,0,.45);
+        0 6px 14px rgba(0,0,0,.5);
 
     transition:
         transform .25s ease,
@@ -591,26 +611,24 @@ footer {
     transform: translateY(-2px);
 
     box-shadow:
-        0 7px 16px rgba(0,0,0,.55);
+        0 8px 18px rgba(0,0,0,.6);
 }
 
-
-/* =====================================================
-   NAV TEXT
-===================================================== */
+/* text nav */
 
 .bottom-item small {
+    font-family: Arial, sans-serif;
+
     font-size: 10px;
 
-    font-weight: bold;
+    font-weight: 700;
 
     letter-spacing: .5px;
 }
 
-
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 500px) {
 
@@ -629,11 +647,11 @@ footer {
     }
 
     .banner {
-        border-radius: 14px;
+        border-radius: 15px;
     }
 
     .btn {
-        height: 48px;
+        height: 49px;
         font-size: 11px;
     }
 
@@ -654,10 +672,9 @@ footer {
     }
 }
 
-
-/* =====================================================
-   REDUCE MOTION
-===================================================== */
+/* =========================================================
+   AKSESIBILITAS
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
