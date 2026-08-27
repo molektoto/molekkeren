@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #020812;
+    color: white;
+}
+
+
+/* BACKGROUND */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(#12385c 1px, transparent 1px);
+
+    background-size: 38px 38px;
+
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+
+/* AREA UTAMA */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 10px;
+}
+
+
+/* KARTU */
+
+.container {
+    position: relative;
+
+    width: 340px;
+    min-height: 650px;
+
+    padding: 20px 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #030a14,
+            #061b35 50%,
+            #020812
+        );
+
+    border: 1px solid #087cff;
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 10px rgba(0, 120, 255, .45),
+        0 0 35px rgba(0, 100, 255, .18);
+
+    overflow: hidden;
+}
+
+
+/* GARIS BIRU ATAS */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 40px;
+    right: 40px;
+
+    height: 2px;
+
+    background: #00bfff;
+
+    box-shadow:
+        0 0 10px #00bfff,
+        0 0 25px #0077ff;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 170px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    color: #56dfff;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 6px rgba(0, 170, 255, .6);
+}
+
+.subtitle span {
+    color: #a6edff;
+}
+
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    border: 2px solid #008cff;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, .8),
+        0 0 25px rgba(0, 100, 255, .3),
+        inset 0 0 20px #000;
+}
+
+.banner img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* BUTTON AREA */
+
+.buttons {
+    margin-top: 18px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #35dce8,
+            #087fd5
+        );
+
+    border: 1px solid #00cfff;
+
+    box-shadow:
+        0 0 10px rgba(0, 160, 255, .65),
+        0 0 20px rgba(0, 100, 255, .2),
+        inset 0 0 15px rgba(255,255,255,.1);
+
+    transition: .25s;
+}
+
+
+/* HOVER */
+
+.btn:hover {
+    transform: scale(1.03);
+
+    background:
+        linear-gradient(
+            135deg,
+            #5cecff,
+            #078cff
+        );
+
+    box-shadow:
+        0 0 15px rgba(0, 200, 255, .95),
+        0 0 30px rgba(0, 120, 255, .5);
+}
+
+
+/* DESKRIPSI */
+
+.description {
+    margin-top: 5px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    font-size: 9px;
+    line-height: 18px;
+
+    color: #82ddff;
+
+    border: 1px dashed #17679c;
+
+    background:
+        rgba(0, 70, 130, .18);
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 15px rgba(0, 120, 255, .06);
+}
+
+.description strong {
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 7px rgba(0, 190, 255, .8);
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #123452;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #52718c;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding: 15px 8px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+}/* =========================
+   NAVIGASI BAWAH
+========================= */
+
+.bottom-nav {
+    position: fixed;
+    z-index: 9999;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 900px;
+    height: 72px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #031946;
+    border-top: 2px solid #111;
+
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.bottom-item {
+    position: relative;
+
+    border: 0;
+    border-right: 1px solid #000d28;
+
+    background: #031946;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-bottom: 8px;
+
+    cursor: pointer;
+}
+
+.bottom-item:last-child {
+    border-right: none;
+}
+
+.nav-icon {
+    position: absolute;
+    top: -25px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    background: #fff;
+    border-radius: 9px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,.35);
+}
+
+.bottom-item small {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.bottom-item.active {
+    background: #08285e;
+}
+
+.bottom-item:hover {
+    background: #0a326e;
+}
