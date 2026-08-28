@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://molekcanggih.pages.dev/sitemap.xml
+Sitemap: https://molektoto.github.io/molekkeren/sitemap.xml
